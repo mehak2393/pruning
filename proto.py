@@ -36,7 +36,7 @@ model_pb.ParseFromString(f.read())
 layers = model_pb.layers
 
 for i in layers:
-    if "fc8" in i.name:
+    if "con_new_1" in i.name:
         print "layer name: ", i.name
         print "width: ",      i.blobs[0].width
         print "height: ",     i.blobs[0].height
