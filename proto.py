@@ -27,7 +27,7 @@ def prune_dense(weight_arr, name="None", thresh=0.005, **kwargs):
     return weight_arr
 
 # How many percentages you want to apply pruning
-ratio = {"fc6":0.91, "fc7":0.91, "fc8":0.75}
+ratio = {"conv1":0.91, "res2a_branch2a":0.91, "res2a_branch2b":0.75, "res2a_branch2c":0.75, "res2a_branch1" :0.75, "res2b_branch2a":0.75, "res2b_branch2b":0.75, "res2b_branch2c":0.75, "res2c_branch2a":0.75, "res2c_branch2b":0.75, "res2c_branch2c":0.75, "res3a_branch1" : 0.75,"res3b1_branch2a" : 0.75, "res3b1_branch2b" : 0.75, "res3b1_branch2c" : 0.75, "res3b2_branch2a" : 0.75, "res3b2_branch2b" : 0.75, "res3b2_branch2c" : 0.75, "res3b3_branch2a" : 0.75, "res3b3_branch2b" : 0.75, "res3b3_branch2c" : 0.75, "res5a_branch2a" : 0.75, "res5a_branch2b" : 0.75, "res5a_branch2c" : 0.75,"res5a_branch1" : 0.75, "res5b_branch2a" : 0.75, "res5b_branch2b" : 0.75, "res5b_branch2c" : 0.75 , "res5c_branch2a" : 0.75, "res5c_branch2b" : 0.75, "res5c_branch2c" : 0.75 ,"conv_new_1":0.75}
 
 model_pb = caffe_pb2.NetParameter()
 f = open(sys.argv[1], "rb")
