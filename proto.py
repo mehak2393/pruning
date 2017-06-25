@@ -19,7 +19,7 @@ def read_boundary_value_with_ratio(data, ratio):
     return thresh
 
 # Input: n-d dense array, Output: pruned array with threshold
-def prune_dense(weight_arr, name="None", thresh=0.005, **kwargs):
+def prune_dense(weight_arr, name="None", thresh=0.5, **kwargs):
     """Apply weight pruning with threshold """
     under_threshold = abs(weight_arr) < thresh
     weight_arr[under_threshold] = 0
